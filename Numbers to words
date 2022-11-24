@@ -11,7 +11,7 @@ print ("second way")
 print (num2words.num2words(input("phone: ")))
 
 print ("third way")
-#third way which requires a dictonary look up
+#third way which requires a dictonary look up (if over 6, error will be used instead)
 second_way = input("phone: ")
 mapping = {
 "1":"one",
@@ -37,16 +37,15 @@ def translate_words():
 
 translate_words()
 
-
 print ("fifth way")
 #fifth way
 #price = input("number: ")
 def cal_gegg(arg):
     #return amout_tetr - price
-    num2words.num2words(arg)
-    return num
+    test = num2words.num2words(arg)
+    return test
 arg=input("number: ")
-cal_gegg (arg)
+print(cal_gegg (arg))
 
 
 print ("sixth way")
