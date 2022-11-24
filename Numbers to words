@@ -1,0 +1,80 @@
+import num2words
+
+#first way which stores input
+print ("first way")
+first_way = input("phone: ")
+translated = num2words.num2words(first_way)
+print ("The number", first_way, "translated, is", translated)
+
+print ("second way")
+#second way which just translates input
+print (num2words.num2words(input("phone: ")))
+
+print ("third way")
+#third way which requires a dictonary look up
+second_way = input("phone: ")
+mapping = {
+"1":"one",
+"2":"two",
+"3":"three",
+"4":"four",
+"5":"five",
+"6":"six"
+}
+output = ""
+for num in second_way:
+    output += mapping.get(num, "Error") + ", "
+print (output)
+
+
+print ("forth way")
+#forth way
+
+def translate_words():
+    user_input = input("number: ")
+    user_input_updated = num2words.num2words(user_input)
+    print (user_input_updated)
+
+translate_words()
+
+
+print ("fifth way")
+#fifth way
+#price = input("number: ")
+def cal_gegg(arg):
+    #return amout_tetr - price
+    num2words.num2words(arg)
+    return num
+arg=input("number: ")
+cal_gegg (arg)
+
+
+print ("sixth way")
+#sixth way
+def smaller_num(x, y): ## Can be rephrased to  def smaller_num(x, y):
+    if x > y:          ##                          if x > y:
+        number = y     ##                              return y
+    else:              ##                          else:
+        number = x     ##                              return x
+    return number
+x = input("Enter first number:-")
+y = input("Enter second number:-")
+result = smaller_num(x, y)
+print("The smaller number between " +  str(x) + " and " + str(y) + " is " + str(result))
+
+
+#looks up another file called defff
+print ("Seventh way")
+#Seventh way
+import defff
+print ("testing")
+
+#this is the second file called defff, meaning information stored in a second file (could contain sensitive information)
+import num2words
+def smaller_num(x):
+    test = num2words.num2words(x)
+    return test
+
+x = input("Enter number: ")
+result = smaller_num(x)
+print(str(result))
