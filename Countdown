@@ -1,0 +1,38 @@
+import tkinter as tk
+
+# Create the main window
+window = tk.Tk()
+
+# Set the title of the window
+window.title("Countdown Timer")
+
+# Set the starting time (in seconds)
+time = 300
+
+# Create a label to display the time
+label = tk.Label(window, text="05:00", font=("Helvetica", 32))
+label.pack()
+
+# Create a function to update the time
+def update_time():
+    global time
+
+    # Decrement the time
+    time -= 1
+
+    # Format the time as minutes and seconds
+    minutes = time // 60
+    seconds = time % 60
+    time_str = "{:02d}:{:02d}".format(minutes, seconds)
+
+    # Update the label
+    label.configure(text=time_str)
+
+    # Schedule the function to be called again in one second
+    window.after(1000, update_time)
+
+# Call the update_time function for the first time
+update_time()
+
+# Start the main event loop
+window.mainloop()
